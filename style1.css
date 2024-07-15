@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-image: url("https://i.ytimg.com/vi/hg3WQinGaag/maxresdefault.jpg");
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+#main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#panel {
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#ptop {
+    padding: 0px 30%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(115, 68, 100, 0.8);
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.elem h2 {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.box {
+    color: rgb(202, 80, 163);
+    font-weight: 600;
+    font-size: 22px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#pbtm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.bubble {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.3),
+                inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+                0 2px 5px rgba(0, 0, 0, 0.3);
+    color: #000;
+    font-size: 22px;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.bubble:before, .bubble:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.bubble:before {
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 5px;
+}
+
+.bubble:after {
+    width: 10px;
+    height: 10px;
+    bottom: 5px;
+    right: 5px;
+}
+
+.bubble:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
